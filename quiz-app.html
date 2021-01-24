@@ -233,7 +233,7 @@ class="prim_text">App Store</span></a>
 							<ul class="mt-md-4">
 								<li><a href="index.html" style="color: white;">Home</a></li>
 								<li><a href="influencer-program.html" style="color: white;">Call for Influencers</a></li>
-								<li><a href="https://bit.ly/SawalBemisaal_V2" style="color: white;">Download App</a></li>
+								<li><a href="https://bit.ly/SawalBemisaal_V3" style="color: white;">Download App</a></li>
 								<li><a href="quiz-app.html" style="color: white;">Quiz App</a></li>
 								<li><a href="earn-money-quiz-app.html" style="color: white;">Earn Money Quiz App</a></li>
 								<li><a href="gk-quiz-earn-money.html" style="color: white;">GK Quiz Earn Money</a></li>
@@ -372,7 +372,7 @@ class="prim_text">App Store</span></a>
 				var url_link = $("#url").val();
 				var ref = $("#ref").val();
 
-				var url = 'https://sawalbemisaal.pauzr.com/api/influencer/join';
+				var url = 'https://api.sawalbemisaal.com/api/influencer/join';
 
 				$.post(url, { name:name, email:email, mobile:mobile, link:url_link, reference:ref }, function (data) {
 					$('#login_form').trigger("reset");
@@ -383,7 +383,7 @@ class="prim_text">App Store</span></a>
 					// document.getElementById("ref").innerHTML = '';
 				});
 				/*$.ajax({
-						url: 'https://sawalbemisaal.pauzr.com/api/app/send-link',
+						url: 'https://api.sawalbemisaal.com/api/app/send-link',
 						type: 'POST',
 						data: mobile,
 						contentType: 'application/json',

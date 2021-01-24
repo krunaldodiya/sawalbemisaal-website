@@ -78,7 +78,7 @@ aria-label="Toggle navigation">
 								type="tel" id="phone" name="phone" placeholder="Enter Your Phone Number">
 							<button type="button" onclick="send_link()" class="btn btn-primary btn-style d-none d-md-inline-block"> Send Link
 								<span class="fa fa-chevron-right"></span></button>
-							<a type="button" href="https://bit.ly/SawalBemisaal_V2" class="btn btn-primary btn-style" style="background-color: #31d51b !important;border-color: #31d51b;padding: 14px 29px 12px;"> 
+							<a type="button" href="https://bit.ly/SawalBemisaal_V3" class="btn btn-primary btn-style" style="background-color: #31d51b !important;border-color: #31d51b;padding: 14px 29px 12px;"> 
 								<i class="fa fa-android pr-2" aria-hidden="true"></i> Download the SB App <i class="fa fa-download pl-2" aria-hidden="true" ></i></a>
 						</form>
 					</div>
@@ -103,7 +103,7 @@ aria-label="Toggle navigation">
 								<span class="fa fa-chevron-right"></span></button>
 							<!-- <button id='download-now-bottom' type="button" onclick="" class="btn btn-primary btn-style" style="background-color: #00CDC0 !important;border-color: #00CDC0;"> Download Now
 								<span class="fa fa-chevron-right"></span></button> -->
-							<a id='download-now-bottom' type="button" href="https://bit.ly/SawalBemisaal_V2" class="btn btn-primary btn-style" style="background-color: #31d51b !important;border-color: #31d51b;padding: 14px 29px 12px;"> 
+							<a id='download-now-bottom' type="button" href="https://bit.ly/SawalBemisaal_V3" class="btn btn-primary btn-style" style="background-color: #31d51b !important;border-color: #31d51b;padding: 14px 29px 12px;"> 
 								<i class="fa fa-android pr-2" aria-hidden="true" ></i> Download the SB App <i class="fa fa-download pl-2" aria-hidden="true" ></i></a>
 						</form>
 					</div>
@@ -800,7 +800,7 @@ class="prim_text">App Store</span></a>
 							<ul class="mt-md-4">
 								<li><a href="index.html" style="color: white;">Home</a></li>
 								<li><a href="influencer-program.html" style="color: white;">Call for Influencers</a></li>
-								<li><a href="https://bit.ly/SawalBemisaal_V2" style="color: white;">Download App</a></li>
+								<li><a href="https://bit.ly/SawalBemisaal_V3" style="color: white;">Download App</a></li>
 								<li><a href="quiz-app.html" style="color: white;">Quiz App</a></li>
 								<li><a href="earn-money-quiz-app.html" style="color: white;">Earn Money Quiz App</a></li>
 								<li><a href="gk-quiz-earn-money.html" style="color: white;">GK Quiz Earn Money</a></li>
@@ -832,7 +832,7 @@ class="prim_text">App Store</span></a>
 			</div>
 
 			<div id="fixedDownloadButton" class="w-100 text-center position-fixed d-none d-sm-none px-4 py-2" style="bottom:0;z-index:1;background-color: white;">
-				<a  type="button" href="https://bit.ly/SawalBemisaal_V2" class="btn btn-primary btn-style w-100" style="border-radius:8px;font-size: 18px;background-color: #31d51b;border-color: #31d51b;box-shadow: 0 0 5px #999;">
+				<a  type="button" href="https://bit.ly/SawalBemisaal_V3" class="btn btn-primary btn-style w-100" style="border-radius:8px;font-size: 18px;background-color: #31d51b;border-color: #31d51b;box-shadow: 0 0 5px #999;">
 					<i class="fa fa-android pr-2" aria-hidden="true" ></i> Download the SB App <i class="fa fa-download pl-2" aria-hidden="true"></i>
 				</a>
 			</div>
@@ -911,7 +911,7 @@ class="prim_text">App Store</span></a>
 					}
 				});
 
-				$.getJSON("https://sawalbemisaal.pauzr.com/api/payments/proofs", function(result){
+				$.getJSON("https://api.sawalbemisaal.com/api/payments/proofs", function(result){
 					var container = $('#payment-proofs');
 					for (var index = 0; index < result['data'].length; index++) {
 						// console.log(result['data'][index]['image']);
@@ -1001,13 +1001,13 @@ class="prim_text">App Store</span></a>
 			function send_link() {
 				var mobile = $("#phone").val();
 				console.log("mobile " + mobile);
-				var url = 'https://sawalbemisaal.pauzr.com/api/app/send-link';
+				var url = 'https://api.sawalbemisaal.com/api/app/send-link';
 				var postcall = $.post(url, { mobile: mobile })
 				postcall.done(function (data) {
 					alert('sms sent');
 				})
 				/*$.ajax({
-						url: 'https://sawalbemisaal.pauzr.com/api/app/send-link',
+						url: 'https://api.sawalbemisaal.com/api/app/send-link',
 						type: 'POST',
 						data: mobile,
 						contentType: 'application/json',
